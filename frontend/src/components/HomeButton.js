@@ -4,6 +4,9 @@ import './CSS/HomeButton.css'
 function HomeButton() {
   return (
     <div className="HomeButton">
+        <div className='ToolbarLine'>
+            
+        </div>
         <div className='SemiCircle'>
             <div className='The'>
                 The
