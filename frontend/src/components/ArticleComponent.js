@@ -1,5 +1,5 @@
 import React from 'react';
-import {DataScroller} from 'primereact/datascroller'
+import './CSS/ArticleComponent.css'
 
 export default class ArticleComponent extends React.Component{
     constructor(){
@@ -12,7 +12,14 @@ export default class ArticleComponent extends React.Component{
     }
     render(){
         return(
-            <DataScroller value={this.state.data} rows={this.state.data.length} buffer={0.9} header={"Your Digest"} inline={true}/>
+            <div className='BoxWrapper'>
+                <div className='Box'>
+                    <div className='ImageBox'/>
+                    <div className='Article'>
+                        Test
+                    </div>
+                </div>
+            </div>
         );
     }
 
