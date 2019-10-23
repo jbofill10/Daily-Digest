@@ -20,6 +20,7 @@ public class getArticleTypeFromReddit {
     public void getArticle(@PathVariable("subreddit") String subreddit){
         Article article = new Article();
         HttpHeaders headers = new HttpHeaders();
+        headers.add("user-agent", "DailyDigest by RationalRepublican10");
         HttpEntity<String> entity = new HttpEntity<>(headers);
 
         ResponseEntity<String> response = restTemplate.exchange("https://www.reddit.com/r/programming.json", HttpMethod.GET, entity, String.class);
