@@ -5,9 +5,6 @@ export default class ArticleComponent extends React.Component{
     constructor(){
         super();
         this.state = {
-            data: [
-                "APPLE", "ORANGE", "PINEAPPLE"
-            ]
         }
     }
     render(){
