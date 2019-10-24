@@ -2,7 +2,7 @@ import React from 'react';
 import './CSS/ArticleComponent.css'
 
 export default class ArticleComponent extends React.Component{
-    constructor(){
+    constructor(props){
         super();
         this.state = {
         }
@@ -11,9 +11,14 @@ export default class ArticleComponent extends React.Component{
         return(
             <div className='BoxWrapper'>
                 <div className='Box'>
-                    <div className='ImageBox'/>
+                    <div className='ImageBox'>
+                        <img src={require('../reddit.png')} style={{width:'100px', height:'100px', paddingTop:'20px'}}/>
+                    </div>
+                    <div className='Subreddit'>
+                        {this.props.subreddit}                        
+                    </div>
                     <div className='Article'>
-                        Test
+                        {this.props.title}
                     </div>
                 </div>
             </div>
