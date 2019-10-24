@@ -1,0 +1,6 @@
+reddit:
+  redditUrl: "https://www.reddit.com"
+  userAgent: "user-agent"
+  userAgentArgs: "DailyDigest by RationalRepublican10"
+  json: ".json"
+

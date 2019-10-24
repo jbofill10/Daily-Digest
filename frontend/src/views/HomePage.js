@@ -30,11 +30,11 @@ export default class HomePage extends React.Component{
     }
 
     displayArticles = (data) => {
-        if(this.state.articles.length === 0){
-            
+        if(this.state.articles.length === 0 || null){
+            console.log("Error")
         }else{
             return(
-                <ArticleComponent title={data.data.title} subreddit={data.data.subreddit_name_prefixed}/>
+                <ArticleComponent title={data.data.title} subreddit={data.data.subreddit_name_prefixed} urlToRedditPost={data.data.permalink}/>
                 )
             }
         }

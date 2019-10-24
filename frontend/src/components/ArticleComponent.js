@@ -12,14 +12,14 @@ export default class ArticleComponent extends React.Component{
             <div className='BoxWrapper'>
                 <div className='Box'>
                     <div className='ImageBox'>
-                        <img src={require('../reddit.png')} style={{width:'100px', height:'100px', paddingTop:'20px'}}/>
+                        <img className='RedditIcon' src={require('../reddit.png')}/>
                     </div>
-                    <div className='Subreddit'>
-                        {this.props.subreddit}                        
-                    </div>
-                    <div className='Article'>
+                    <a href={`http://www.reddit.com/${this.props.subreddit}`} className='Subreddit'>
+                        {this.props.subreddit}                      
+                    </a>
+                    <a href={`http://www.reddit.com/${this.props.urlToRedditPost}`} className='Article'>
                         {this.props.title}
-                    </div>
+                    </a>
                 </div>
             </div>
         );
