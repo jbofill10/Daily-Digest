@@ -1,8 +1,12 @@
 .BoxWrapper{
-    padding-top: 25px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .Box{
-    height: 180px;
+    height: 100px;
     width: 85%;
     background-color: #bab7b8;
     margin-left: auto;
@@ -10,12 +14,12 @@
     border-color: #5e5e5e;
     border-style: solid;
     border-radius: 12px;
+    display: flex;
+    justify-content: center;
 }
 
 .ImageBox{
-    margin-top: 2%;
-    height: 120px;
-    width: 10%;
+    height: 70px;
     background-color: #bab7b8;
     border-top: 0px;
     border-left: 0px;
@@ -23,26 +27,52 @@
     border-right: 1.5px;
     border-color: #5e5e5e;
     border-style: solid; 
-    float: left;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
 }
 
 .Article{
-    height: 180px;
-    width: 80%;
+    width: 100%;
     float: left;
     text-align: left;
-    padding-left: 20px;
-    margin-top: 1%;
+    margin-top: 0.5%;
+    max-width: 80%;
+    font-size: 20px;
+    font-weight: bold;
 
 }
 
 .Subreddit {
-    float: right;
-    padding-right: 5px;
+    font-weight: bold;
+    font-size: 17px;
+
 }
 
 .RedditIcon{
-    position: relative;
-    height: 75px;
-    margin-top: 10%;
+    height: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-top: auto;
+}
+
+.SubbredditWrapper{
+    float: right;
+    margin-right: 2%;
+}
+
+.PostWrapper{
+    margin-left: 2%;
+}
+
+.ArticleContentWrapper{
+    width: 100%;
+}
+.ImageBoxWrapper{
+    min-width: 8%;
+    flex-shrink: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    
 }

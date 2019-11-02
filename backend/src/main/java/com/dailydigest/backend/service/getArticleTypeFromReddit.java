@@ -34,14 +34,18 @@ public class getArticleTypeFromReddit {
         HttpHeaders headers = new HttpHeaders();
         headers.add(redditConstants.getUserAgent(), redditConstants.getUserAgentArgs());
         HttpEntity<String> entity = new HttpEntity<>(headers);
-        System.out.println(redditConstants.getRedditUrl() + "/r/" + subreddit + redditConstants.getJson());
+
         ResponseEntity<Parent> response = restTemplate.exchange(redditConstants.getRedditUrl() + "/r/" + subreddit + redditConstants.getJson(), HttpMethod.GET, entity, Parent.class);
         Parent parent = response.getBody();
-        System.out.println(response.getStatusCode());
+
         if (response.getStatusCode().equals(HttpStatus.OK)) {
-            return parent.getData().getChildren();
-        } else {
-            return null;
+            if (parent != null) {
+                return parent.getData().getChildren();
+            } else {
+                return null;
+            }
         }
+
+        return null;
     }
 }
